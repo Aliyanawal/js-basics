@@ -33,3 +33,37 @@ function sumOfDigits(){
     }
     document.getElementById("dresult").innerHTML = sum;
 }
+
+function checkPrime() {
+    const number = parseInt(document.getElementById("primeInput").value);
+
+    if (isNaN(number) || number < 2) {
+        document.getElementById("presult").innerHTML = "Enter a number greater than 1.";
+        return;
+    }
+
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            document.getElementById("presult").innerHTML = number + " is not a Prime number.";
+            return;
+        }
+    }
+
+    document.getElementById("presult").innerHTML = number + " is a Prime number.";
+}
+
+function calculateFactorial() {
+    const number = parseInt(document.getElementById("factorialInput").value);
+
+    if (isNaN(number) || number < 0) {
+        document.getElementById("fresult").innerHTML = "Please enter a non-negative number.";
+        return;
+    }
+
+    let result = 1;
+    for (let i = 2; i <= number; i++) {
+        result *= i;
+    }
+
+    document.getElementById("fresult").innerHTML = "Factorial of " + number + " is " + result;
+}

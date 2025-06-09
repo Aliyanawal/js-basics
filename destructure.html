@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id = "swap"></p>
+<p id = "swapped"></p>
+<p id = "string"></p>
+<script>
+const colors = ['red','green','blue','yellow']
+console.log(colors[0]);
+console.log(colors[1]);
+console.log(colors[2]);
+document.getElementById("demo").innerHTML = colors[0]+"<br>" + colors[1] + "<br>" + colors[2];
+
+let a = 10;
+let b = 15;
+
+document.getElementById("swap").innerHTML = a + "<br>" + b;
+
+[ a , b] = [b , a];
+document.getElementById("swapped").innerHTML = a + "<br>" + b;
+
+const car = {
+    brand: "Toyota",
+    model: "Camry",
+    year: "2022"
+
+};
+
+document.getElementById("string").innerHTML = "The car is " + car.brand + " of model " + car.model + ",Year " + car.year;
+
+
+</script>
+
+
+
+</body>
+</html>
+
